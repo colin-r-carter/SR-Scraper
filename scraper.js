@@ -1,3 +1,5 @@
+console.log("started scraper");
+
 let titles = document.getElementsByTagName("h5"); //Titles are all h5-elements. No other h5-elements on the page 
 let articles = document.getElementsByClassName("collapseableArticle"); //Articles are wrapped in a collapsable div
 let collection = [];
@@ -12,9 +14,11 @@ function getArticlesWithHtml(){
       }
       collection.push(art);
     }
+    console.log("done!");
+    console.log(collection);
   } else {
-    alert("Scraper does not work anymore... Probably due to changes on the website.");
+    console.log("Scraper does not work anymore... Probably due to changes on the website.");
   }
 }
 
-getArticlesWithHtml();
+getArticlesWithHtml()
